@@ -11,19 +11,14 @@ public class PlusMinus {
 	static long solution(int w, int h) {
 	
 		long answer=0;
-		if(w==h) {
-			return w;
-		}else {
-			//answer =w*h-
-			//answer = Math.abs((w*w)-(h*h));			
-		}
-		
-		boolean[][] t = new boolean[w][h];
-		for(int i=0;i<w;i++) {
-			for(int ii=0;ii<h;ii++) {
-				
+		int min = (w<h) ? w:h;
+		long gcd = 0;
+		for(int i=1;i<=min;i++) {
+			if(w%i==0 && h%i==0) {
+				gcd = i;
 			}
 		}
+		answer = (long)w*h-(w+h-gcd);
 		return answer;
 	}
 }
