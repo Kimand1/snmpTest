@@ -66,7 +66,7 @@ public class WaveToRaw {
 				*/
 				File outFile = new File(s);
 				List<String> commands = new ArrayList<String>();
-				commands.add("d:\\app\\ffmpeg");
+				commands.add("ffmpeg");
 				commands.add("-i");
 				commands.add(data);
 				commands.add("-ac");
